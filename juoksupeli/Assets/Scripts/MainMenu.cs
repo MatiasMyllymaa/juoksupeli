@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnClick_Settings()
     {
-        
+        MenuManager.OpenMenu(Menu.SETTINGS, gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnClick_Shop() 
     {
-        
+        MenuManager.OpenMenu(Menu.SHOP, gameObject);
     }
 }
