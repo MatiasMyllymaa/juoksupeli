@@ -9,7 +9,7 @@ public class platform : MonoBehaviour
     //platformin liikkumis nopeus
     public float moveSpeed;
 
-    const float PLAN_SIZE = 40f; // Depending on the size of your Prefab
+    const float PLATFORM_SIZE = 40f; // Platformin koko
     private GameObject _Player;
     private void OnEnable()
     {
@@ -20,7 +20,7 @@ public class platform : MonoBehaviour
 
     private void Update()
     {
-        if (_Player.transform.position.z > transform.position.z + PLAN_SIZE)
+        if (_Player.transform.position.z > transform.position.z + PLATFORM_SIZE)
         {
             _platformgenerator.RecyclePlatform(this.gameObject);
         }

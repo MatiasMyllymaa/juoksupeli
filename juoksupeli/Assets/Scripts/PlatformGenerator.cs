@@ -7,7 +7,7 @@ public class PlatformGenerator : MonoBehaviour
     [SerializeField] private GameObject[] _platformPrefabs;
     private float zOffset;
     private GameObject tempGO;
-    private GameObject lastPlatform; // Reference to the last instantiated platform
+    private GameObject lastPlatform; // viimeinen platform
 
     void Start()
     {
@@ -21,11 +21,11 @@ public class PlatformGenerator : MonoBehaviour
             float prefabSize = GetPrefabSize(_platformPrefabs[i]);
             instantiatedPlatforms[i] = Instantiate(_platformPrefabs[i], new Vector3(0, 0, totalSize), Quaternion.identity);
             totalSize += prefabSize;
-            totalSize += 40.0f; // Add an extra buffer space between platforms
+            totalSize += 40.0f; // platformin z koko
         }
 
-        zOffset = totalSize; // Set the final zOffset value
-        lastPlatform = instantiatedPlatforms[instantiatedPlatforms.Length - 1]; // Set the last instantiated platform as the initial reference
+        zOffset = totalSize; 
+        lastPlatform = instantiatedPlatforms[instantiatedPlatforms.Length - 1]; 
     }
 
     public void RecyclePlatform(GameObject platform)
@@ -34,7 +34,7 @@ public class PlatformGenerator : MonoBehaviour
         platform.transform.position = lastPlatform.transform.position + Vector3.forward * prefabSize;
         zOffset += prefabSize;
 
-        lastPlatform = platform; // Update the reference to the last platform
+        lastPlatform = platform; 
     }
 
     private float GetPrefabSize(GameObject prefab)
@@ -46,7 +46,7 @@ public class PlatformGenerator : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Collider not found on the platform prefab!");
+            Debug.LogError("ERROR");
             return 0f;
         }
     }
