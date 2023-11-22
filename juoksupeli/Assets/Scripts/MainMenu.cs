@@ -12,4 +12,8 @@ public class MainMenu : MonoBehaviour
     {
         MenuManager.OpenMenu(Menu.SHOP, gameObject);
     }
+    public void OnClick_Exit()
+    {
+        MenuManager.OpenMenu(Menu.EXIT, gameObject);
+    }
 }

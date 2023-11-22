@@ -31,6 +31,9 @@ public static class MenuManager
             case Menu.SHOP:
                 shopMenu.SetActive(true);
                 break;
+            case Menu.EXIT:
+                Application.Quit();
+                break;
         }
 
         callingMenu.SetActive(false);

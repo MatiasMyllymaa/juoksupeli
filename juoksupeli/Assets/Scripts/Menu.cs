@@ -3,5 +3,6 @@ public enum Menu
 {
     MAIN_MENU,
     SETTINGS,
-    SHOP
+    SHOP,
+    EXIT
 }
