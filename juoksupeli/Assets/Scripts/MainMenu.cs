@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public void OnClick_Play()
+    {
+        MenuManager.OpenMenu(Menu.PLAY, gameObject);
+    }
     public void OnClick_Settings()
     {
         MenuManager.OpenMenu(Menu.SETTINGS, gameObject);
