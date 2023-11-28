@@ -3,7 +3,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float totalTime = 0f;
+    private float totalTime = 0f;
     private float currentTime = 0f;
     private bool isTimerRunning = false;
 
@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
     {
         if (isTimerRunning)
         {
-            currentTime += Time.deltaTime;
+            currentTime += Time.deltaTime * 10;
 
             UpdateTimerText();
         }
@@ -53,9 +53,8 @@ public class Timer : MonoBehaviour
 
     string FormatTime(float time)
     {
-        int minutes = Mathf.FloorToInt(time / 60f);
-        int seconds = Mathf.FloorToInt(time % 60f);
-        return string.Format("{0:00}:{1:00}", minutes, seconds);
+        int seconds = Mathf.FloorToInt(time);
+        return string.Format("{0}", seconds);
     }
 
     public float GetCurrentTime()
