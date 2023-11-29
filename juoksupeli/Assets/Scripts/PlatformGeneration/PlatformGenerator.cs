@@ -24,8 +24,8 @@ public class PlatformGenerator : MonoBehaviour
             totalSize += 40.0f; // platformin z koko
         }
 
-        zOffset = totalSize; 
-        lastPlatform = instantiatedPlatforms[instantiatedPlatforms.Length - 1]; 
+        zOffset = totalSize;
+        lastPlatform = instantiatedPlatforms[instantiatedPlatforms.Length - 1];
     }
 
     public void RecyclePlatform(GameObject platform)
@@ -34,7 +34,7 @@ public class PlatformGenerator : MonoBehaviour
         platform.transform.position = lastPlatform.transform.position + Vector3.forward * prefabSize;
         zOffset += prefabSize;
 
-        lastPlatform = platform; 
+        lastPlatform = platform;
     }
 
     private float GetPrefabSize(GameObject prefab)
