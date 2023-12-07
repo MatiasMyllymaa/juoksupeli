@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformGenerator : MonoBehaviour
+public class PlatformManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] _platformPrefabs;
     private float zOffset;
@@ -46,7 +46,6 @@ public class PlatformGenerator : MonoBehaviour
         }
         else
         {
-            Debug.LogError("ERROR");
             return 0f;
         }
     }
