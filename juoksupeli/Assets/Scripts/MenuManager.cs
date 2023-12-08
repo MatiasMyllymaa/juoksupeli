@@ -46,8 +46,16 @@ public static class MenuManager
     private static void LoadGameScene()
     {
         string gameSceneName = "GameScene";
-        if (SceneManager.GetActiveScene().name != gameSceneName)
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Only load the scene if the current scene is not the game scene
+        if (currentScene.name != gameSceneName)
         {
+            SceneManager.LoadScene(gameSceneName);
+        }
+        else
+        {
+            // If the scene is already loaded, unload and then load again
             SceneManager.LoadScene(gameSceneName);
         }
     }
