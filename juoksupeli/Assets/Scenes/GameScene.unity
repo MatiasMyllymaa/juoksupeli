@@ -131,6 +131,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4928743063535007371, guid: 3fcb30812eae7a340a1087245dd19e71, type: 3}
+      propertyPath: _platformPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2226140741326905669, guid: e1195f8705b7a4e438e0d10ba14f6ef9, type: 3}
+    - target: {fileID: 4928743063535007371, guid: 3fcb30812eae7a340a1087245dd19e71, type: 3}
+      propertyPath: _platformPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1884753237426278301, guid: 35f612b6aac52c14199a6ec598930cba, type: 3}
+    - target: {fileID: 4928743063535007371, guid: 3fcb30812eae7a340a1087245dd19e71, type: 3}
+      propertyPath: _platformPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1884753237426278301, guid: 2694f8855695a064e9af89466965d793, type: 3}
     - target: {fileID: 7278327452047655432, guid: 3fcb30812eae7a340a1087245dd19e71, type: 3}
       propertyPath: _firstPlatformPrefab
       value: 
