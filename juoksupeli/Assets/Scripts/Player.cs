@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
     IEnumerator DamageCooldown()
     {
         invincible = true;
-        yield return new WaitForSecondsRealtime(damageCooldown);
+        yield return new WaitForSecondsRealtime(damageCooldown); 
         invincible = false;
     }
 }
