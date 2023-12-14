@@ -433,9 +433,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: OnMainMenuButtonClick
+      - m_Target: {fileID: 1513733790}
+        m_TargetAssemblyTypeName: ResetGame, Assembly-CSharp
+        m_MethodName: ResetTheGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2172,6 +2172,7 @@ GameObject:
   - component: {fileID: 1513733789}
   - component: {fileID: 1513733788}
   - component: {fileID: 1513733787}
+  - component: {fileID: 1513733790}
   m_Layer: 0
   m_Name: manager
   m_TagString: Untagged
@@ -2220,6 +2221,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1513733790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513733786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47557dadae2554b42afd123c2a086354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802009685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fcd45c5a8c422a24983ef21d5f3d559d, type: 3}
